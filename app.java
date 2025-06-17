@@ -6,6 +6,7 @@ public class app {
 
     public static void main (String[] args) {
     
+        //creates the window
         JFrame frame = new JFrame();
         JPanel panel = new JPanel(); 
         Window win = new Window(frame, panel);
@@ -14,6 +15,30 @@ public class app {
         JLabel txt = new JLabel();
         txt.setText("test");
         panel.add(txt);
+
+        String[] cycleChars = {"a", "b", "c"};
+        int charsIn = 0;
+
+        JLabel cycle = new JLabel();
+
+        int testVar = 1;
+
+        //main loop
+        while (true) {
+            testVar++;
+
+            cycle.setText(cycleChars[charsIn]);
+            panel.add(cycle);
+            charsIn = (charsIn + 1) % 3;
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println("sleep error found");
+            }
+
+            win.clear(testVar);
+        }
 
     }
 }
@@ -56,4 +81,10 @@ class Window {
         frame.add(panel);
     } 
 
+    public void clear(int testVar) {
+        System.out.println("on loop iteration " + testVar);
+        this.panel.removeAll();
+        this.panel.revalidate();
+        this.panel.repaint();
+    }
 }
