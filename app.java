@@ -1,45 +1,38 @@
 import javax.swing.*;
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import java.awt.*;
+import java.awt.event.*;
 
 public class app {
 
     public static void main (String[] args) {
-    
-        //creates the window
-        JFrame frame = new JFrame();
+
+        JFrame frame = new JFrame("Java Game");
         JPanel panel = new JPanel(); 
         Window win = new Window(frame, panel);
-        win.run();
 
-        JLabel txt = new JLabel();
-        txt.setText("test");
-        panel.add(txt);
+        SwingUtilities.invokeLater(new Runnable() {
 
-        String[] cycleChars = {"a", "b", "c"};
-        int charsIn = 0;
+            @Override
+            public void run() {
 
-        JLabel cycle = new JLabel();
+                //creates the window
+                win.start();
 
-        int testVar = 1;
+                JLabel txt = new JLabel();
+                txt.setText("test");
+                panel.add(txt);
+                panel.setBackground(Color.RED);
 
-        //main loop
-        while (true) {
-            testVar++;
-
-            cycle.setText(cycleChars[charsIn]);
-            panel.add(cycle);
-            charsIn = (charsIn + 1) % 3;
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                System.out.println("sleep error found");
+                Timer test = new Timer (1000, loop -> gameLoop(loop));
+                test.start();
             }
+        });
 
-            win.clear(testVar);
-        }
+        
+    }
+    private static void gameLoop(ActionEvent act) {
 
+        System.out.println("test");
     }
 }
 
@@ -56,7 +49,7 @@ class Window {
     /**
      * Creates a window with frame and panel given in init.
      */
-    public void run() {
+    public void start() {
 
         //finds the screensize so that the window can be placed in the middle of screen
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize(); 

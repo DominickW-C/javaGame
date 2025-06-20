@@ -21,3 +21,12 @@
   all I did is make a google search and it told me two methods I could use. Do I have to cite it? Does it matter?
   Do I now have to cite every resource I use? I have no clue, but that's what this is for. I could also probably
   turn off AI suggestions but is it worth it? Who knows.
+
+** 6-19-25 **
+- I decided to look up some tutorials which helped me better understand what I am doing. Now I know to use the 
+  invoke later method, although that did creates some issues with the main loop. I then figured out about swing timer
+  which fixed that issue. I NEED TO DO A LOT OF CLEANING UP IN THIS. This commit is very ugly but oh well. also I had 
+  to make an import to awt.* and awt.event.*? Seems kinda dumb but thanks Google AI answers for that one. I am also
+  not going to be mentioning it in these notes anymore as it's annoying to do. Like I am still trying to do this on my
+  own, if I am Googling something I am trying to learn what it does (although some of the frame stuff I am still confused
+  on), I am doing this to try and learn ok I am gonna be Googling things I don't know.
