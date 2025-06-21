@@ -30,3 +30,8 @@
   not going to be mentioning it in these notes anymore as it's annoying to do. Like I am still trying to do this on my
   own, if I am Googling something I am trying to learn what it does (although some of the frame stuff I am still confused
   on), I am doing this to try and learn ok I am gonna be Googling things I don't know.
+
+** 6-21-25 **
+- I finally figured out how to draw graphics on the screen that took way too much time for me to do but it works now.
+  Updated TODO so see that for next things that will be done. I also tried cleaning up the code a lot to make it a lot
+  more readable. I should still go back and add JavaDocs to the classes and stuff though.

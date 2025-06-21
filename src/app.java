@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class app {
+    
+    static Window win = new Window();
+    static int loopIt = 0;
+
+    //main game loop
+    private static void gameLoop(ActionEvent act) {
+        System.out.println("test");
+        Player.X = (Player.X + 5) % win.WINDOW_WIDTH;
+        System.out.println(Player.X);
+        win.clear(loopIt);
+        loopIt++;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                //creates the window, and starts main loop
+                win.start();
+                
+                Timer ti = new Timer (17, loop -> gameLoop(loop));
+                ti.start();
+            }
+        });
+    }
+}
+
+
