@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 class Window {
 
@@ -32,12 +33,14 @@ class Window {
         //sizes panel to frame 
         panel.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 
-        //add panel to frame
+        //add panel to frame 
+        //NOTE: this panel is focusable
         frame.add(panel);
+        frame.addKeyListener(new checkKey());
     } 
 
     public void clear(int testVar) {
-        System.out.println("on loop iteration " + testVar);
+        //System.out.println("on loop iteration " + testVar);
         
         panel.removeAll();
         panel.revalidate();
@@ -50,10 +53,26 @@ class MainPanel extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawString("test", 10, 20);
-        g.drawRect(10,10,10,10);
-        g.drawRect(100,100,100,100);
         g.drawRect(Player.X, Player.Y, Player.WIDTH, Player.HEIGHT);
 
+    }
+}
+
+class checkKey implements KeyListener {
+
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyChar() == ' ')  {
+            if (Player.FALLING == true) {
+                Player.FALLING = false;
+            } else {
+                Player.FALLING = true;
+            }
+        }
+    }
+
+    //Don't really need these two methods to do anything
+    public void keyReleased(KeyEvent e) {
+    }
+    public void keyTyped(KeyEvent e) {
     }
 }

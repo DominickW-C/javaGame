@@ -1,7 +1,6 @@
 ** A list of things that I want to do for this app **
 
-- add keyboard listener
-- adding the ability for that thing to jump
+- adding the ability for the bird to flap 
 - add bird gravity
 - add pipes
     - draw pipe with random y cords
@@ -12,3 +11,4 @@
 - make the frame size correctly (still kinda unsure what I want to do about this)
 - move something that is drawn to the screen 
 - draw to the frame
+- add keyboard listener

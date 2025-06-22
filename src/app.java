@@ -8,9 +8,13 @@ public class app {
 
     //main game loop
     private static void gameLoop(ActionEvent act) {
-        System.out.println("test");
-        Player.X = (Player.X + 5) % win.WINDOW_WIDTH;
-        System.out.println(Player.X);
+        //System.out.println("test");
+        if (Player.FALLING == true) {
+            Player.Y = (Player.Y + 5) % win.WINDOW_WIDTH;
+        } else {
+            Player.Y = (Player.Y - 5) % win.WINDOW_WIDTH;
+        }
+        //System.out.println(Player.X);
         win.clear(loopIt);
         loopIt++;
     }

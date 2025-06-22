@@ -35,3 +35,7 @@
 - I finally figured out how to draw graphics on the screen that took way too much time for me to do but it works now.
   Updated TODO so see that for next things that will be done. I also tried cleaning up the code a lot to make it a lot
   more readable. I should still go back and add JavaDocs to the classes and stuff though.
+
+- SECOND UPDATE: Added the keyboard handler. This was also a good learning expirience as I learned the difference between
+  extending and implementing with classes and interfaces. I am also getting better at reading through the Java documentation
+  which is super helpful. 
