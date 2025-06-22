@@ -14,6 +14,10 @@ public class app {
         } else {
             Player.Y = (Player.Y - 5) % win.WINDOW_WIDTH;
         }
+
+        Pipes.update();
+        Player.checkCollision();
+
         //System.out.println(Player.X);
         win.clear(loopIt);
         loopIt++;

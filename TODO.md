@@ -2,9 +2,7 @@
 
 - adding the ability for the bird to flap 
 - add bird gravity
-- add pipes
-    - draw pipe with random y cords
-    - once off screen redraw all the way to right with new random y cords
+- add the collision for the pipes
 
 ** Things I have done **
 
@@ -12,3 +10,6 @@
 - move something that is drawn to the screen 
 - draw to the frame
 - add keyboard listener
+- add pipes
+    - draw pipe with random y cords
+    - once off screen redraw all the way to right with new random y cords

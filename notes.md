@@ -39,3 +39,8 @@
 - SECOND UPDATE: Added the keyboard handler. This was also a good learning expirience as I learned the difference between
   extending and implementing with classes and interfaces. I am also getting better at reading through the Java documentation
   which is super helpful. 
+
+** 6-22-25
+- Pipes can now spawn with hte gaps being random (although always the same size) and will reset once the edge of the screen
+  is reached. Also added the collision to the floor and to the ceiling, not yet the pipes though. Maybe something like if
+  at Y val to hit pipe, check X val? Not sure yet. Also added JavaDocs to most things.

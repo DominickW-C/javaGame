@@ -54,6 +54,12 @@ class MainPanel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawRect(Player.X, Player.Y, Player.WIDTH, Player.HEIGHT);
+        g.fillRect(Pipes.pipe1.X, Pipes.pipe1.Y, Pipes.pipe1.WIDTH, Pipes.pipe1.HEIGHT);
+        g.fillRect(Pipes.pipe2.X, Pipes.pipe2.Y, Pipes.pipe2.WIDTH, Pipes.pipe2.HEIGHT);
+        
+        //draws the bottom half of the pipes
+        g.fillRect(Pipes.pipe1.X, Pipes.pipe1.BOTTOM_Y, Pipes.pipe1.WIDTH, Pipes.pipe1.BOTTOM_HEIGHT);
+        g.fillRect(Pipes.pipe2.X, Pipes.pipe2.BOTTOM_Y, Pipes.pipe2.WIDTH, Pipes.pipe2.BOTTOM_HEIGHT);
 
     }
 }
