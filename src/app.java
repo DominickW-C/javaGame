@@ -9,13 +9,33 @@ public class app {
     //main game loop
     private static void gameLoop(ActionEvent act) {
         //System.out.println("test");
+        
         if (Player.FALLING == true) {
             Player.Y = (Player.Y + 5) % win.WINDOW_WIDTH;
         } else {
             Player.Y = (Player.Y - 5) % win.WINDOW_WIDTH;
         }
 
+        //FOR DEBUGGING PURPOSES
+        /*
+        if (Player.UP) {
+            Player.Y -= 5;
+        }
+        if (Player.DOWN) {
+            Player.Y += 5;
+
+        }
+        if (Player.LEFT) {
+            Player.X -= 5;
+
+        }
+        if (Player.RIGHT) {
+            Player.X += 5;
+        }
+        */
+
         Pipes.update();
+        Pipes.checkScore();
         Player.checkCollision();
 
         //System.out.println(Player.X);

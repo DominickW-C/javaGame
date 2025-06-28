@@ -8,7 +8,6 @@
   as I feel like that is a good size to start with. I also figured out how to make it so the window will
   always make itself in the middle of the screen. Lastly, I added a main panel along with a label in order
   to add text to the screen. The next few things planned will be event listeners and refreshing the screen.
-
 ** 6-16-25 **
 - Another small commit that adds the main event loop to the program. I was lost for a bit as to why it would
   not refresh correctly although I ended up finding the repaint and revalidate methods (thanks google AI 
@@ -40,7 +39,16 @@
   extending and implementing with classes and interfaces. I am also getting better at reading through the Java documentation
   which is super helpful. 
 
-** 6-22-25
+** 6-22-25 **
 - Pipes can now spawn with hte gaps being random (although always the same size) and will reset once the edge of the screen
   is reached. Also added the collision to the floor and to the ceiling, not yet the pipes though. Maybe something like if
   at Y val to hit pipe, check X val? Not sure yet. Also added JavaDocs to most things.
+
+** 6-28-25 **
+- Added a score counter to the screen. While right now you get points even if you touch a pipe, that won't be a worry when the
+  game is done as it will end before you gain the point. Added the collision to the bottom pipes and did some cleaning up. 
+  Probably could add a for loop to shorten the amount of code but I am not sure if it will run slower (not that it is any 
+  demanding of a game) or if it is worth it since if only has to check for two pipes. Leaving how it is for now. I guess if
+  I really wanted to improve the performace I could check which pipe is currently ahead and only check to collision on that one
+  but this game is too simple to need all that. Might add if bored just to try. Also added some debugging options that let you
+  move the player around freely. This was so I could check collision better. I wonder how many typos are in this document?

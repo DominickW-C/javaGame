@@ -42,6 +42,18 @@ class Pipes {
         p.BOTTOM_Y = p.HEIGHT + 80;
     }
 
+    /**
+     * Checks if a point was scored (75 not 80 to make sure pipe was cleared).
+     */
+    public static void checkScore() {
+        if (pipe1.X + pipe1.WIDTH == 75) {
+            Player.SCORE ++;
+        }
+        if (pipe2.X + pipe1.WIDTH == 75) {
+            Player.SCORE ++;
+        } 
+    }
+
 }
 
 /**

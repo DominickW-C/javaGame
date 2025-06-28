@@ -1,8 +1,10 @@
 ** A list of things that I want to do for this app **
 
+- fix text rendering
+- center align the text 
 - adding the ability for the bird to flap 
 - add bird gravity
-- add the collision for the pipes
+- add sprites
 
 ** Things I have done **
 
@@ -13,3 +15,4 @@
 - add pipes
     - draw pipe with random y cords
     - once off screen redraw all the way to right with new random y cords
+- add the collision for the pipes

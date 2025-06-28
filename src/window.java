@@ -49,10 +49,17 @@ class Window {
 }
 
 class MainPanel extends JPanel {
-    
+    //FIXME: renders very pixelated
+    Font mainFont = new Font("Arial", 0, 40);
+
     @Override
     public void paintComponent(Graphics g) {
+        g.setFont(mainFont);
         super.paintComponent(g);
+
+        //TODO: center align text and put in middle of screen
+        g.drawString(Player.SCORE.toString(), 40, 60);
+
         g.drawRect(Player.X, Player.Y, Player.WIDTH, Player.HEIGHT);
         g.fillRect(Pipes.pipe1.X, Pipes.pipe1.Y, Pipes.pipe1.WIDTH, Pipes.pipe1.HEIGHT);
         g.fillRect(Pipes.pipe2.X, Pipes.pipe2.Y, Pipes.pipe2.WIDTH, Pipes.pipe2.HEIGHT);
@@ -60,7 +67,6 @@ class MainPanel extends JPanel {
         //draws the bottom half of the pipes
         g.fillRect(Pipes.pipe1.X, Pipes.pipe1.BOTTOM_Y, Pipes.pipe1.WIDTH, Pipes.pipe1.BOTTOM_HEIGHT);
         g.fillRect(Pipes.pipe2.X, Pipes.pipe2.BOTTOM_Y, Pipes.pipe2.WIDTH, Pipes.pipe2.BOTTOM_HEIGHT);
-
     }
 }
 
@@ -74,10 +80,44 @@ class checkKey implements KeyListener {
                 Player.FALLING = true;
             }
         }
+
+        //USED FOR DEBUGGING PURPOSES ONLY
+        /*
+        if (e.getKeyChar() == 'w')  {
+            Player.UP = true;
+        }
+        
+        if (e.getKeyChar() == 's')  {
+            Player.DOWN = true;
+        }
+        if (e.getKeyChar() == 'a')  {
+            Player.LEFT = true;
+        }  
+        if (e.getKeyChar() == 'd')  {
+            Player.RIGHT = true;
+        }
+        */
     }
 
     //Don't really need these two methods to do anything
     public void keyReleased(KeyEvent e) {
+
+        //USED FOR DEBUGGING PURPOSES ONLY
+        /*
+        if (e.getKeyChar() == 'w')  {
+            Player.UP = false;
+        }
+        
+        if (e.getKeyChar() == 's')  {
+            Player.DOWN = false;
+        }
+        if (e.getKeyChar() == 'a')  {
+            Player.LEFT = false;
+        }  
+        if (e.getKeyChar() == 'd')  {
+            Player.RIGHT = false;
+        }
+        */
     }
     public void keyTyped(KeyEvent e) {
     }
