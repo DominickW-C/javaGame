@@ -51,4 +51,5 @@
   demanding of a game) or if it is worth it since if only has to check for two pipes. Leaving how it is for now. I guess if
   I really wanted to improve the performace I could check which pipe is currently ahead and only check to collision on that one
   but this game is too simple to need all that. Might add if bored just to try. Also added some debugging options that let you
-  move the player around freely. This was so I could check collision better. I wonder how many typos are in this document?
+  move the player around freely. These options are currently commented out. This was mostly so that I could check collision 
+  better. I wonder how many typos are in this document?
