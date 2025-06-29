@@ -2,9 +2,8 @@
 
 - fix text rendering
 - center align the text 
-- adding the ability for the bird to flap 
-- add bird gravity
 - add sprites
+- add game over and restart
 
 ** Things I have done **
 
@@ -16,3 +15,5 @@
     - draw pipe with random y cords
     - once off screen redraw all the way to right with new random y cords
 - add the collision for the pipes
+- add bird gravity
+- adding the ability for the bird to flap 

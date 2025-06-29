@@ -9,12 +9,16 @@ public class app {
     //main game loop
     private static void gameLoop(ActionEvent act) {
         //System.out.println("test");
+
+        Player.Y = Player.Y - Player.addGravity();
         
+        /*
         if (Player.FALLING == true) {
             Player.Y = (Player.Y + 5) % win.WINDOW_WIDTH;
         } else {
             Player.Y = (Player.Y - 5) % win.WINDOW_WIDTH;
         }
+        */
 
         //FOR DEBUGGING PURPOSES
         /*
@@ -50,7 +54,7 @@ public class app {
                 //creates the window, and starts main loop
                 win.start();
                 
-                Timer ti = new Timer (17, loop -> gameLoop(loop));
+                Timer ti = new Timer (17, loop -> gameLoop(loop)); //should be 17
                 ti.start();
             }
         });

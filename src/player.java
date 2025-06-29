@@ -10,8 +10,7 @@ class Player {
     static int Y = 100;
     static int WIDTH = 20;
     static int HEIGHT = 20;
-    //false for down, true for up
-    static boolean FALLING = true;
+    static int GRAVITY = -20;
 
     //USED FOR DEBUGGING PURPOSES ONLY
     /*
@@ -22,12 +21,33 @@ class Player {
     */
 
     /**
+     * Calculates the gravity for the bird.
+     * I have never implemented gravity before,
+     * So this could be very wrong but it works
+     * pretty good for this game.
+     *
+     * @return int to add/subtract from Y pos
+     */
+    public static int addGravity() {
+        GRAVITY ++;
+        int delta = (int) ((.009 * (GRAVITY * GRAVITY)));
+        while (delta > -1 & delta < 1) {
+            GRAVITY ++;
+            delta = (int) ((.009 * (GRAVITY * GRAVITY)));
+        }
+        if (GRAVITY <= 0) {
+            return delta;
+        } else{
+            return -delta;
+        }
+    }
+
+    /**
      * Checks to see if the player hit something.
      */
     public static void checkCollision() {
         if (Y <= 0 || Y >= 480 - WIDTH) {
             System.out.println("hit edge of screen");
-            FALLING = !FALLING;
         }
 
         //I could probably do this by putting P1 and P2 in a array and looping but nah this works fine

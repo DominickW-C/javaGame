@@ -39,7 +39,7 @@ class Pipes {
     private static void resetPipe(pipe p) {
         p.X = 640;
         p.HEIGHT = p.rand.nextInt(230) + 20;
-        p.BOTTOM_Y = p.HEIGHT + 80;
+        p.BOTTOM_Y = p.HEIGHT + 100;
     }
 
     /**
@@ -64,7 +64,7 @@ class Pipes {
 class pipe {
     Random rand = new Random();
     int Y = 0;  
-    int WIDTH = 40;
+    int WIDTH = 50;
     int X;
     int HEIGHT;
     //added the variables here so collision is easier
@@ -78,7 +78,7 @@ class pipe {
      */
     pipe(int offset) {
         HEIGHT = rand.nextInt(440) + 20;  
-        BOTTOM_Y = HEIGHT + 80;
+        BOTTOM_Y = HEIGHT + 100;
         X = 640 + offset;
 
     }

@@ -53,3 +53,15 @@
   but this game is too simple to need all that. Might add if bored just to try. Also added some debugging options that let you
   move the player around freely. These options are currently commented out. This was mostly so that I could check collision 
   better. I wonder how many typos are in this document?
+
+- SECOND UPDATE: I added the gravity to the game and made it so the bird could flap. I didn't want to just copy and paste 
+  something from google for it so I tried to do it myself and I think it came out pretty good. It is a very wide quadratic
+  function that starts at a negative x val. If the x val is negative, then we wanna add to our y val since we are on the left
+  side of our peek, and then if it is positive then subtract is because we are on the right side. I could have probably found
+  a way to do this without the weird check but it works and I can say I did it myself. Since the function is so wide, I was 
+  running into an issue where the player will just stop at the top for a while, so to fix this I added a loop that will increment
+  the x val if it returns a y val between -1 and 1 so there is no odd wait. I was worried that this would cause a slowdown cause
+  of the loop but it didn't. And then to flap it just resets the x val back to a negative number. I also realize that this is the
+  third commit today, although after making my first commit I realized I wanted to change some lines in this file so I edited them
+  and made another commit, and thought since I only pushed once it would only count on Github as one commit, but it ended up being
+  two. So the second commit was pretty much nothing. 

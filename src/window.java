@@ -73,12 +73,9 @@ class MainPanel extends JPanel {
 class checkKey implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyChar() == ' ')  {
-            if (Player.FALLING == true) {
-                Player.FALLING = false;
-            } else {
-                Player.FALLING = true;
-            }
+
+        if (e.getKeyChar() == ' ') {
+            Player.GRAVITY = -30;
         }
 
         //USED FOR DEBUGGING PURPOSES ONLY
