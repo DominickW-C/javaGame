@@ -77,6 +77,11 @@ class checkKey implements KeyListener {
         if (e.getKeyChar() == ' ') {
             Player.GRAVITY = -30;
         }
+        if (e.getKeyChar() == 'r') {
+            Player.reset();
+            Pipes.reset();
+            app.ti.restart();
+        }
 
         //USED FOR DEBUGGING PURPOSES ONLY
         /*

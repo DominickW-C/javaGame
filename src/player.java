@@ -42,12 +42,19 @@ class Player {
         }
     }
 
+    public static void reset() {
+        SCORE = 0;
+        Y = 100;
+        GRAVITY = -20;
+    }
+
     /**
      * Checks to see if the player hit something.
      */
-    public static void checkCollision() {
+    public static boolean checkCollision() {
         if (Y <= 0 || Y >= 480 - WIDTH) {
             System.out.println("hit edge of screen");
+            return true;
         }
 
         //I could probably do this by putting P1 and P2 in a array and looping but nah this works fine
@@ -65,12 +72,14 @@ class Player {
             if ( (((Y + HEIGHT) >= P1.Y) & ((Y + HEIGHT) <= (P1.Y + P1.HEIGHT))) ||
              ((Y >= P1.Y) & (Y <= (P1.Y + P1.HEIGHT))) ) {
                 System.out.println("Collision detected top pipe 1");
+                return true;
             }
 
             //Checks for bottom pipe
             else if ( (((Y + HEIGHT) >= P1.BOTTOM_Y) & ((Y + HEIGHT) <= (P1.BOTTOM_Y + P1.BOTTOM_HEIGHT))) ||
              ((Y >= P1.BOTTOM_Y) & (Y <= (P1.BOTTOM_Y + P1.BOTTOM_HEIGHT))) ) {
                 System.out.println("Collision detected bottom pipe 1");
+                return true;
             }
         }
 
@@ -82,13 +91,16 @@ class Player {
             if ( (((Y + HEIGHT) >= P2.Y) & ((Y + HEIGHT) <= (P2.Y + P2.HEIGHT))) ||
              ((Y >= P2.Y) & (Y <= (P2.Y + P2.HEIGHT))) ) {
                 System.out.println("Collision detected top pipe 2");
+                return true;
             }
 
             //Checks for Bottom pipe
             else if ( (((Y + HEIGHT) >= P2.BOTTOM_Y) & ((Y + HEIGHT) <= (P2.BOTTOM_Y + P2.BOTTOM_HEIGHT))) ||
              ((Y >= P2.BOTTOM_Y) & (Y <= (P2.BOTTOM_Y + P2.BOTTOM_HEIGHT))) ) {
                 System.out.println("Collision detected bottom pipe 2");
+                return true;
             }
         }
+        return false;
     }
 }

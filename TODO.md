@@ -3,7 +3,8 @@
 - fix text rendering
 - center align the text 
 - add sprites
-- add game over and restart
+- add game over screen
+- add home screen
 
 ** Things I have done **
 
@@ -17,3 +18,5 @@
 - add the collision for the pipes
 - add bird gravity
 - adding the ability for the bird to flap 
+- added ability to reset
+- made game end at collision

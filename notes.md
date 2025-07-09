@@ -65,3 +65,12 @@
   third commit today, although after making my first commit I realized I wanted to change some lines in this file so I edited them
   and made another commit, and thought since I only pushed once it would only count on Github as one commit, but it ended up being
   two. So the second commit was pretty much nothing. 
+
+** 7-8-25 **
+- Added the ability to reset when a collision happens. Also made the game end when a collision happens. Also went and made it so
+  many hardcoded numbers are now variables, making it easier to change things like that gaps on the pipes with only one number
+  instead of having to go through and do it in every method that can draw a pipe. Also changed offsets to variables which didn't
+  really do much but it made the pipe reset method a little more clear. Also now I have resetPipe and reset method which is a bit
+  confusing but one resets a single pipe and the other both. The reason why I have two methods is becasue when resetting one pipe
+  at a time you don't have to worry about the offset, but when resetting both you do. While I could have found a way to do this 
+  in one method I think it is a little more clear this way despite the similar names.

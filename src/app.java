@@ -5,6 +5,7 @@ public class app {
     
     static Window win = new Window();
     static int loopIt = 0;
+    static Timer ti = new Timer (17, loop -> gameLoop(loop)); //should be 17
 
     //main game loop
     private static void gameLoop(ActionEvent act) {
@@ -40,7 +41,9 @@ public class app {
 
         Pipes.update();
         Pipes.checkScore();
-        Player.checkCollision();
+        if (Player.checkCollision()) {
+            ti.stop();
+        }
 
         //System.out.println(Player.X);
         win.clear(loopIt);
@@ -54,7 +57,6 @@ public class app {
                 //creates the window, and starts main loop
                 win.start();
                 
-                Timer ti = new Timer (17, loop -> gameLoop(loop)); //should be 17
                 ti.start();
             }
         });
